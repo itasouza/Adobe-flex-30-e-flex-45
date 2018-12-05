@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009"
+			   xmlns:s="library://ns.adobe.com/flex/spark"
+			   xmlns:mx="library://ns.adobe.com/flex/mx"
+			   minWidth="955" minHeight="600" backgroundColor="#FFFFFF">
+	
+	<fx:Script>
+		<![CDATA[
+			import mx.controls.Alert;
+			
+		]]>
+	</fx:Script>
+	
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+		<s:RadioButtonGroup id="radiogrupo_sexo"/>
+		<s:RadioButtonGroup id="Casado"/>
+	</fx:Declarations>
+	<s:Label x="56" y="59" text="Cadastro de pessoas"/>
+	<s:TextInput x="80" y="96"/>
+	<s:Label x="18" y="100" text="Código:"/>
+	<s:Label x="222" y="99" text="Nome:"/>
+	<s:TextInput x="275" y="94" width="197"/>
+	<s:Label x="221" y="154" text="Sexo:"/>
+	
+	
+	<s:RadioButton x="224" y="193" label="Masculino" groupName="radiogrupo_sexo"/>
+	<s:RadioButton x="224" y="171" label="Feminino" groupName="radiogrupo_sexo"/>
+	
+	<s:Label x="77" y="154" text="Casado?"/>
+	<s:VGroup x="77" y="169" width="136">
+		<s:RadioButton label="Sim" groupName="Casado"/>
+		<s:RadioButton label="Não" groupName="Casado"/>
+	</s:VGroup>
+	
+	<s:Label x="481" y="126" text="Estados:"/>
+	<s:ComboBox x="537" y="120" width="130">
+		<s:ArrayCollection>
+			<fx:String>RS</fx:String>
+			<fx:String>SP</fx:String>
+			<fx:String>PR</fx:String>
+			<fx:String>TO</fx:String>
+			<fx:String>CE</fx:String>
+			<fx:String>AM</fx:String>
+			
+		</s:ArrayCollection>
+	</s:ComboBox>
+	
+	<s:Label x="324" y="156" text="Data de Nascimento:"/>
+	<mx:DateField x="313" y="182" width="157"/>
+	
+	
+	<s:DataGrid x="77" y="233" width="590" height="127">
+		<s:ArrayCollection>
+			<fx:Object>
+				<fx:codigo>1</fx:codigo>
+				<fx:nome>Itamar Souza</fx:nome>
+				<fx:endereco>Rua do AAA</fx:endereco>
+				<fx:cidade>São Paulo</fx:cidade>
+				<fx:estado>SP</fx:estado>
+			</fx:Object>
+			<fx:Object>
+				<fx:codigo>2</fx:codigo>
+				<fx:nome>Jose de Souza</fx:nome>
+				<fx:endereco>Rua do sssssA</fx:endereco>
+				<fx:cidade>São Paulo</fx:cidade>
+				<fx:estado>SP</fx:estado>
+			</fx:Object>
+			<fx:Object>
+				<fx:codigo>3</fx:codigo>
+				<fx:nome>Gustavo</fx:nome>
+				<fx:endereco>Rua do sfsafsaf</fx:endereco>
+				<fx:cidade>São Paulo</fx:cidade>
+				<fx:estado>SP</fx:estado>
+			</fx:Object>
+			
+		</s:ArrayCollection>
+	</s:DataGrid>
+	
+	
+	<s:Button x="152" y="399" label="Salvar"/>
+	<s:Button x="77" y="399" label="Novo" click="Alert.show('Clique no Botão Novo','Mensagem')"/>
+	<s:Button x="229" y="399" label="Excluir"/>
+	<s:Button x="307" y="400" label="Alterar"/>
+	<s:TextInput x="80" y="122"/>
+	<s:Label x="18" y="126" text="Endereço:"/>
+	<s:Label x="222" y="125" text="Cidade:"/>
+	<s:TextInput x="275" y="120" width="197"/>
+	
+
+	
+</s:Application>

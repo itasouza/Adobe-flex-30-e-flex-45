@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009"
+			   xmlns:s="library://ns.adobe.com/flex/spark"
+			   xmlns:mx="library://ns.adobe.com/flex/mx"
+			   minWidth="955" minHeight="600" backgroundColor="#FFFFFF">
+	
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+		<s:RadioButtonGroup id="radiogrupo_sexo"/>
+		<s:RadioButtonGroup id="Casado"/>
+	</fx:Declarations>
+	<s:Label x="56" y="59" text="Cadastro de pessoas"/>
+	<s:TextInput x="68" y="95"/>
+	<s:Label x="18" y="100" text="Código:"/>
+	<s:Label x="222" y="99" text="Nome:"/>
+	<s:TextInput x="275" y="94" width="197"/>
+	<s:Label x="68" y="138" text="Sexo:"/>
+	
+	
+	<s:RadioButton x="150" y="158" label="Masculino" groupName="radiogrupo_sexo"/>
+	<s:RadioButton x="68" y="158" label="Feminino" groupName="radiogrupo_sexo"/>
+	
+	
+
+		
+	<s:Button x="72" y="195" label="Botão Salvar"/>
+	<s:VGroup x="275" y="158" width="197">
+		<s:RadioButton label="Sim" groupName="Casado"/>
+		<s:RadioButton label="Não" groupName="Casado"/>
+	</s:VGroup>
+	<s:Label x="275" y="138" text="Casado?"/>
+	
+	
+</s:Application>

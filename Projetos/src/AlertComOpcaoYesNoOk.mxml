@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009"
+			   xmlns:s="library://ns.adobe.com/flex/spark"
+			   xmlns:mx="library://ns.adobe.com/flex/mx"
+			   minWidth="955" minHeight="600" backgroundColor="#FFFFFF">
+	
+	<fx:Script>
+		<![CDATA[
+			import mx.controls.Alert;
+			
+		]]>
+	</fx:Script>
+	
+	
+	
+	<s:Button x="120" y="89" label="Alert Simples" click="Alert.show('Clique no Botão Novo','Mensagem Simples')"/>
+	<s:Button x="120" y="118" width="95" label="Alert 2" click="Alert.show('Você quer ganhar dinheiro?','Mensagem Simples',3)"/>
+	<s:Button x="120" y="147" width="95" label="Alterar"/>
+
+	
+	
+	
+</s:Application>

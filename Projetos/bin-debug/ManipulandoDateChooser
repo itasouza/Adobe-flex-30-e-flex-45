@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009"
+			   xmlns:s="library://ns.adobe.com/flex/spark"
+			   xmlns:mx="library://ns.adobe.com/flex/mx"
+			   minWidth="955" minHeight="600" backgroundColor="#FFFFFF">
+	
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+		<s:RadioButtonGroup id="radiogrupo_sexo"/>
+		<s:RadioButtonGroup id="Casado"/>
+	</fx:Declarations>
+	<s:Label x="56" y="59" text="Cadastro de pessoas"/>
+	<s:TextInput x="73" y="96"/>
+	<s:Label x="18" y="100" text="Código:"/>
+	<s:Label x="222" y="99" text="Nome:"/>
+	<s:TextInput x="275" y="94" width="197"/>
+	<s:Label x="275" y="133" text="Sexo:"/>
+	
+	
+	<s:RadioButton x="357" y="153" label="Masculino" groupName="radiogrupo_sexo"/>
+	<s:RadioButton x="275" y="153" label="Feminino" groupName="radiogrupo_sexo"/>
+	
+	<s:Label x="484" y="53" text="Casado?"/>
+	<s:VGroup x="484" y="73" width="197">
+		<s:RadioButton label="Sim" groupName="Casado"/>
+		<s:RadioButton label="Não" groupName="Casado"/>
+	</s:VGroup>
+	
+	<s:ComboBox x="72" y="147" width="130">
+		<s:ArrayCollection>
+			<fx:String>RS</fx:String>
+			<fx:String>SP</fx:String>
+			<fx:String>PR</fx:String>
+			<fx:String>TO</fx:String>
+			<fx:String>CE</fx:String>
+			<fx:String>AM</fx:String>
+		
+		</s:ArrayCollection>
+	</s:ComboBox>
+	
+	<s:Label x="484" y="147" text="Data de Nascimento:"/>
+	<mx:DateField x="483" y="169" width="198"/>
+		
+	<s:Button x="87" y="303" label="Botão Salvar"/>
+	<s:Label x="17" y="154" text="Estados:"/>
+
+	
+
+	
+	
+</s:Application>
