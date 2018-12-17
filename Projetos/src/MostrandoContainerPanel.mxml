@@ -10,7 +10,7 @@
 			import mx.events.CloseEvent;
 			
 			private function ganharDinheiro(event:Event):void{
-			   Alert.show('Você que ganhar dinheiro?','Function Alert',3,this,escolha_dinheiro);	  
+				Alert.show('Você que ganhar dinheiro?','Function Alert',3,this,escolha_dinheiro);	  
 			}
 			
 			private function escolha_dinheiro(event:CloseEvent):void{
@@ -24,6 +24,28 @@
 				
 			}
 			
+			private function time_futebol(event:Event):void{
+				Alert.buttonWidth = 100;
+				Alert.yesLabel = "Internacional";
+				Alert.noLabel   = "Grêmio";
+				Alert.show('Qual o seu time preferido?','Seu Time',3, this, escolha);
+				
+			}
+			
+			private function escolha(event:CloseEvent):void{
+				if(event.detail == Alert.YES){
+					time.text = Alert.yesLabel; //'Sim, Escolheu Internacional';
+					//Alert.show('Sim!','Tudo Certo');	
+				}else{
+					//Alert.show('Não!','Tudo Certo');	
+					time.text = Alert.noLabel; // 'Não, ele não que ganhar dinheiro';	
+				}
+			}
+			
+			private function copiarTexto():void{
+				texto_transferido.text = texto_digitado.text ;
+			}
+			
 		]]>
 	</fx:Script>
 	
@@ -33,6 +55,13 @@
 	<s:Button x="120" y="118" width="95" label="Alert 2" click="Alert.show('Você quer ganhar dinheiro?','Mensagem Simples',3)"/>
 	<s:Button x="120" y="147" width="151" label="Alterar com evento" click="ganharDinheiro(event)"/>
 	<s:Label x="286" y="151" text="Label" id="label_dinheiro"/>
+	<s:Button x="120" y="195" width="151" label="Time Futebol" click="time_futebol(event)"/>
+	<s:Label id="time" x="286" y="204" text="Label"/>
+	
+	<s:TextInput x="120" y="240" id="texto_digitado"/>
+	<s:Button x="266" y="237" label="Transfere 1 " click="texto_transferido.text = texto_digitado.text"/>
+	<s:Button x="266" y="266" label="Transfere 2" click="copiarTexto()"/>
+	<s:TextInput x="373" y="239" id="texto_transferido"/>
 	
 	
 	
